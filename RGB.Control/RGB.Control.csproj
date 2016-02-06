@@ -35,6 +35,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="NAudio, Version=1.7.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.1.7.3\lib\net35\NAudio.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -86,6 +90,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -94,6 +99,20 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Arduino.Control\ArduinoControl.csproj">
+      <Project>{2b2821a7-ca78-4d3a-847c-feee8490e71b}</Project>
+      <Name>ArduinoControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Color.Converter\Color.Converter.csproj">
+      <Project>{DE8B83EE-6DF5-43F2-A737-05D4EBB09FB0}</Project>
+      <Name>Color.Converter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SoundProcessing\Sound.Processing.csproj">
+      <Project>{fb6a315c-0c93-4c33-b3a7-7cac4378c35e}</Project>
+      <Name>Sound.Processing</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
