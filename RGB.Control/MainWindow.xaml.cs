@@ -67,7 +67,7 @@ namespace RGB.Control
 
                 if (_blink)
                 {
-                    luminosity = 0.36*_peak/300;
+                    luminosity = 0.36*_peak/600;
                     if (luminosity > 1)
                     {
                         luminosity = 1;
